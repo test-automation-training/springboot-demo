@@ -1,5 +1,9 @@
 # SpringBoot Demo
 
+本 Demo 基于测试金字塔理论，目的是探求 SpringBoot 框架下对测试金字塔思想的表达，以及一些优秀工具的演示：
+
+- [Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
+
 ## 运行程序
 
 运行以下 `Gradle` 任务启动程序：

@@ -10,12 +10,12 @@ public class DemoControllerTest {
     private DemoController controller;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         controller = new DemoController();
     }
 
     @Test
-    public void indexShouldReturnHelloWorld() throws Exception {
+    public void indexShouldReturnHelloWorld() {
         assertThat(controller.index()).isEqualTo("Hello World!");
     }
 }
