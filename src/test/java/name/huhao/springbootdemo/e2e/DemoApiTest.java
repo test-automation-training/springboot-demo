@@ -1,4 +1,4 @@
-package name.huhao.springbootdemo.api;
+package name.huhao.springbootdemo.e2e;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

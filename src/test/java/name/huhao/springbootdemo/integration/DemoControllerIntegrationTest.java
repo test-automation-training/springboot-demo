@@ -1,5 +1,6 @@
-package name.huhao.springbootdemo.controller;
+package name.huhao.springbootdemo.integration;
 
+import name.huhao.springbootdemo.controller.DemoController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(DemoController.class)
-public class DemoControllerMockMvcTest {
+public class DemoControllerIntegrationTest {
 
     @Autowired
     MockMvc mvc;

@@ -14,10 +14,16 @@
 
 ## 运行测试
 
-使用以下命令运行 API 的集成测试：
+使用以下命令运行 API 的端到端测试：
 
 ```bash
-./gradlew test --tests "name.huhao.springbootdemo.api.*"
+./gradlew test --tests "name.huhao.springbootdemo.e2e.*"
+```
+
+使用以下命令运行 Controller 的集成测试：
+
+```bash
+./gradlew test --tests "name.huhao.springbootdemo.integration.*"
 ```
 
 使用以下命令运行 Controller 的单元测试：
