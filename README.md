@@ -57,7 +57,7 @@
 
 #### 演示测试驱动开发的过程
 
-1. 先写一个新的 Controller 的单元测试，Mock 掉Repository，会发现驱动出不依赖 Spring 框架的 Controller 代码。
-2. 再写一个针对上述 Controller 的集成测试，Mock 掉 Repository，会发现引入了 Spring 针对 Controller 的必要注解。
-3. 再写一个针对上述 Controller 所依赖的 Repository 的一成测试，会使得 Repository 继承 JpaRepository。
+1. 先写一个新的 Controller 的单元测试，Mock 掉 Repository，会发现驱动出不依赖 Spring 框架的 Controller 代码。
+2. 再写一个针对上述 Controller 的集成测试，Mock 掉 Repository，会驱动引入 Spring 针对 Controller 的必要注解。
+3. 再写一个针对上述 Controller 所依赖的 Repository 的集成测试，会驱动 Repository 继承 JpaRepository。
 4. 再写一个针对上述 Controller 的端到端测试，弥补了之前两种集成测试的测试间隙，实现最终完成。
