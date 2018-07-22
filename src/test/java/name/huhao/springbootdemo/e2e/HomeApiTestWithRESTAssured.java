@@ -13,7 +13,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class DemoApiTestWithRESTAssured {
+public class HomeApiTestWithRESTAssured {
 
     @LocalServerPort
     private int port;

@@ -1,4 +1,4 @@
-package name.huhao.springbootdemo.integration;
+package name.huhao.springbootdemo.integration.repository;
 
 import name.huhao.springbootdemo.model.User;
 import name.huhao.springbootdemo.repository.UserRepository;
@@ -23,11 +23,12 @@ public class UserRepositoryTest {
 
     @Test
     public void userCanFindById() {
-        var alex = entityManager.persist(User.builder().name("Alex").age(18).build());
+        entityManager.persist(User.builder().name("Alex").age(18).build());
 
-        var foundUser = repository.findById(alex.getId());
+        var foundUsers = repository.findByName("Alex");
 
-        assertThat(foundUser).get()
+        assertThat(foundUsers).hasSize(1)
+                .first()
                 .hasFieldOrPropertyWithValue("name", "Alex")
                 .hasFieldOrPropertyWithValue("age", 18);
     }

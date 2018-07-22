@@ -29,6 +29,8 @@ dependencies {
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 
     compile 'org.flywaydb:flyway-core'
+    testCompile 'org.flywaydb.flyway-test-extensions:flyway-spring-test:5.0.0'
+
     runtime 'mysql:mysql-connector-java'
     testRuntime 'com.h2database:h2'
 

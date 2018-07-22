@@ -12,14 +12,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class DemoApiTest {
+public class HomeApiTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
 
     @Test
     public void indexShouldReturnHelloWorld() {
-        var result = this.restTemplate.getForObject("/", String.class);
+        var result = restTemplate.getForObject("/", String.class);
         assertThat(result).isEqualTo("Hello World!");
     }
 }

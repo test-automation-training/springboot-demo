@@ -1,5 +1,5 @@
 CREATE TABLE `user` (
-  `id`                 CHAR(16),
+  `id`                 CHAR(36),
   `name`               NVARCHAR(255),
   `age`                INT
 );

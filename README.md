@@ -35,5 +35,11 @@
 使用以下命令运行 Controller 的单元测试：
 
 ```bash
-./gradlew test --tests "name.huhao.springbootdemo.controller.*"
+./gradlew test --tests "name.huhao.springbootdemo.unit.*"
 ```
+
+## 备忘
+
+### 端到端测试中的数据库重置
+
+本 Demo 中的端到端测试使用了 [flyway-test-extensions](https://github.com/flyway/flyway-test-extensions) 进行每个测试用例运行前的数据库重置。
