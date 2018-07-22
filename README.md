@@ -6,6 +6,10 @@
 
 - [Practical Test Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
 
+## 运行环境
+
+- JDK 10 及以上版本
+
 ## 运行程序
 
 运行以下 `Gradle` 任务启动程序：
