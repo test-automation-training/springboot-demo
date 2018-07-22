@@ -15,11 +15,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class DemoApiTest {
 
     @Autowired
-    TestRestTemplate restTemplate;
+    private TestRestTemplate restTemplate;
 
     @Test
     public void indexShouldReturnHelloWorld() {
-        String result = this.restTemplate.getForObject("/", String.class);
+        var result = this.restTemplate.getForObject("/", String.class);
         assertThat(result).isEqualTo("Hello World!");
     }
 }

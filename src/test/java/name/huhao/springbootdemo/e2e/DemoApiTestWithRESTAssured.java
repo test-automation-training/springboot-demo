@@ -16,7 +16,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 public class DemoApiTestWithRESTAssured {
 
     @LocalServerPort
-    int port;
+    private int port;
 
     @Test
     public void indexShouldReturnHelloWorld() {

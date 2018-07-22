@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class DemoControllerIntegrationTest {
 
     @Autowired
-    MockMvc mvc;
+    private MockMvc mvc;
 
     @Test
     public void indexShouldReturnHelloWorld() throws Exception {
