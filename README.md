@@ -47,3 +47,17 @@
 ### 端到端测试中的数据库重置
 
 本 Demo 中的端到端测试使用了 [flyway-test-extensions](https://github.com/flyway/flyway-test-extensions) 进行每个测试用例运行前的数据库重置。
+
+### 可以利用本 Demo 进行的演示
+
+#### 演示符合测试金字塔的测试运行速度差异
+
+1. 在 Intellij IDEA 中运行全部测试。
+2. 对比 UserController 的全部测试，会发运行速度有符合测试金字塔的明显差异。
+
+#### 演示测试驱动开发的过程
+
+1. 先写一个新的 Controller 的单元测试，Mock 掉Repository，会发现驱动出不依赖 Spring 框架的 Controller 代码。
+2. 再写一个针对上述 Controller 的集成测试，Mock 掉 Repository，会发现引入了 Spring 针对 Controller 的必要注解。
+3. 再写一个针对上述 Controller 所依赖的 Repository 的一成测试，会使得 Repository 继承 JpaRepository。
+4. 再写一个针对上述 Controller 的端到端测试，弥补了之前两种集成测试的测试间隙，实现最终完成。
