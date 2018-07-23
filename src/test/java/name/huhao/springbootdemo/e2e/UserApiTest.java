@@ -38,7 +38,7 @@ public class UserApiTest {
 
     @Test
     public void indexShouldReturnHelloWorld() throws Exception {
-        var alex = userRepository.save(User.builder().name("Alex").age(18).build());
+        var alex = userRepository.save(new User("Alex", 18));
 
         var mapper = new ObjectMapper();
         var expectedJson = mapper.writeValueAsString(Lists.newArrayList(alex));

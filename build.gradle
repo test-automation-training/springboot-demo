@@ -34,8 +34,6 @@ dependencies {
     runtime 'mysql:mysql-connector-java'
     testRuntime 'com.h2database:h2'
 
-    compileOnly 'org.projectlombok:lombok'
-
     // just use to show how to use REST Assured to improve test
     testCompile 'io.rest-assured:rest-assured:3.1.0'
     testCompile 'io.rest-assured:spring-mock-mvc:3.1.0'

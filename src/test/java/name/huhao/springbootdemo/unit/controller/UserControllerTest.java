@@ -29,7 +29,7 @@ public class UserControllerTest {
     @Test
     public void indexShouldReturnUsers() {
 
-        var usersFromDB = Lists.newArrayList(User.builder().name("Bill").age(18).build());
+        var usersFromDB = Lists.newArrayList(new User("Alex", 18));
         when(userRepository.findAll()).thenReturn(usersFromDB);
 
         var users = controller.index();

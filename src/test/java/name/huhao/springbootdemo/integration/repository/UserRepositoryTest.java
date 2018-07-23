@@ -23,7 +23,7 @@ public class UserRepositoryTest {
 
     @Test
     public void userCanFindById() {
-        entityManager.persist(User.builder().name("Alex").age(18).build());
+        entityManager.persist(new User("Alex", 18));
 
         var foundUsers = repository.findByName("Alex");
 

@@ -29,7 +29,7 @@ public class UserControllerIntegrationTest {
 
     @Test
     public void indexShouldReturnHelloWorld() throws Exception {
-        var usersFromDB = Lists.newArrayList(User.builder().name("Alex").age(18).build());
+        var usersFromDB = Lists.newArrayList(new User("Alex", 18));
         when(userRepository.findAll()).thenReturn(usersFromDB);
 
         mvc.perform(get("/users"))

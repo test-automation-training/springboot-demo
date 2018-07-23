@@ -39,7 +39,7 @@ public class UserApiTestWithRESTAssured {
 
     @Test
     public void indexShouldReturnHelloWorld() {
-        userRepository.save(User.builder().name("Alex").age(18).build());
+        userRepository.save(new User("Alex", 18));
 
         given().port(port).when().get("/users")
                 .then()

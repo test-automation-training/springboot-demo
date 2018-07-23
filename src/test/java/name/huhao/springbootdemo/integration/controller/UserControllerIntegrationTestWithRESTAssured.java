@@ -30,7 +30,7 @@ public class UserControllerIntegrationTestWithRESTAssured {
 
     @Test
     public void indexShouldReturnHelloWorld() {
-        var usersFromDB = Lists.newArrayList(User.builder().name("Alex").age(18).build());
+        var usersFromDB = Lists.newArrayList(new User("Alex", 18));
         Mockito.when(userRepository.findAll()).thenReturn(usersFromDB);
 
         when().get("/users")
