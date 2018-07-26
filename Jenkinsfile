@@ -18,7 +18,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './gradlew bootrun'
+                sh './gradlew bootjar'
+                sh 'java -jar build/libs/springboot-demo-0.0.1-SNAPSHOT.jar --server.port=8081'
             }
         }
     }
