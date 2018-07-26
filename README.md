@@ -12,6 +12,12 @@
 
 ## 运行程序
 
+使用 `Docker Compose` 启动已经过配置的 `MySQL` 容器（默认端口号为 3306）：
+
+```bash
+docker-compose up -d
+```
+
 运行以下 `Gradle` 任务启动程序：
 
 ```bash

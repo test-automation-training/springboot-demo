@@ -38,3 +38,10 @@ dependencies {
     testCompile 'io.rest-assured:rest-assured:3.1.0'
     testCompile 'io.rest-assured:spring-mock-mvc:3.1.0'
 }
+
+flyway {
+    url = "jdbc:mysql://127.0.0.1:3306"
+    user = "root"
+    password = "password"
+    schemas = ['springboot_demo']
+}
