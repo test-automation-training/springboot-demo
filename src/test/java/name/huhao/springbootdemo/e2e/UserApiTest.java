@@ -38,12 +38,12 @@ public class UserApiTest {
 
     @Test
     public void indexShouldReturnHelloWorld() throws Exception {
-        var alex = userRepository.save(new User("Alex", 18));
+        User alex = userRepository.save(new User("Alex", 18));
 
-        var mapper = new ObjectMapper();
-        var expectedJson = mapper.writeValueAsString(Lists.newArrayList(alex));
+        ObjectMapper mapper = new ObjectMapper();
+        String expectedJson = mapper.writeValueAsString(Lists.newArrayList(alex));
 
-        var result = restTemplate.getForObject("/users", String.class);
+        String result = restTemplate.getForObject("/users", String.class);
         assertThat(result).isEqualTo(expectedJson);
     }
 }

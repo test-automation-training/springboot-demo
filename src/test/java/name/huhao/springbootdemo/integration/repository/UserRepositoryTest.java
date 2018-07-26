@@ -9,6 +9,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
@@ -25,7 +27,7 @@ public class UserRepositoryTest {
     public void userCanFindById() {
         entityManager.persist(new User("Alex", 18));
 
-        var foundUsers = repository.findByName("Alex");
+        List<User> foundUsers = repository.findByName("Alex");
 
         assertThat(foundUsers).hasSize(1)
                 .first()

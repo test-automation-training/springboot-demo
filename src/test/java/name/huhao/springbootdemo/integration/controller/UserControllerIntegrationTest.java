@@ -13,6 +13,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.List;
+
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -29,7 +31,7 @@ public class UserControllerIntegrationTest {
 
     @Test
     public void indexShouldReturnHelloWorld() throws Exception {
-        var usersFromDB = Lists.newArrayList(new User("Alex", 18));
+        List<User> usersFromDB = Lists.newArrayList(new User("Alex", 18));
         when(userRepository.findAll()).thenReturn(usersFromDB);
 
         mvc.perform(get("/users"))

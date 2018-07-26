@@ -10,6 +10,8 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
@@ -29,10 +31,10 @@ public class UserControllerTest {
     @Test
     public void indexShouldReturnUsers() {
 
-        var usersFromDB = Lists.newArrayList(new User("Alex", 18));
+        List<User> usersFromDB = Lists.newArrayList(new User("Alex", 18));
         when(userRepository.findAll()).thenReturn(usersFromDB);
 
-        var users = controller.index();
+        List<User> users = controller.index();
 
         assertThat(users).isEqualTo(usersFromDB);
     }

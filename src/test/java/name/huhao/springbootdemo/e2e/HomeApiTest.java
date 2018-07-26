@@ -19,7 +19,7 @@ public class HomeApiTest {
 
     @Test
     public void indexShouldReturnHelloWorld() {
-        var result = restTemplate.getForObject("/", String.class);
+        String result = restTemplate.getForObject("/", String.class);
         assertThat(result).isEqualTo("Hello World!");
     }
 }
