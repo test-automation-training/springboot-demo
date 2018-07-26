@@ -16,11 +16,15 @@ pipeline {
                 sh './gradlew test --tests "name.huhao.springbootdemo.e2e.*"'
             }
         }
-        stage('Deploy') {
+        stage('Package') {
             steps {
                 sh './gradlew bootjar'
-                sh 'java -jar build/libs/springboot-demo-0.0.1-SNAPSHOT.jar --server.port=8081'
             }
         }
+//        stage('Deploy') {
+//            steps {
+//                sh 'java -jar build/libs/springboot-demo-0.0.1-SNAPSHOT.jar --server.port=8081'
+//            }
+//        }
     }
 }
