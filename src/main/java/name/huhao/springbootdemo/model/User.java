@@ -21,7 +21,7 @@ public class User {
     @Column(nullable = false)
     private int age;
 
-    public User() {
+    protected User() {
     }
 
     public User(String name, int age) {
