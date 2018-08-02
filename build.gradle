@@ -42,7 +42,7 @@ dependencies {
 }
 
 flyway {
-    url = "jdbc:mysql://db:3306"
+    url = "jdbc:mysql://127.0.0.1:3306"
     user = "root"
     password = "password"
     schemas = ['springboot_demo']

@@ -23,9 +23,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker-compose down --rmi local'
-                sh 'docker-compose build'
-                sh 'docker-compose up -d'
+                sh 'kill $(cat ./bin/shutdown.pid)'
+                sh 'JENKINS_NODE_COOKIE=dontKillMe nohup java -jar build/libs/springboot-demo-0.0.1-SNAPSHOT.jar --server.port=8081 &'
             }
         }
     }
