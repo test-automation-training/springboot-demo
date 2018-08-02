@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'kill $(cat ./bin/shutdown.pid)'
+                sh 'ps aux | grep \'springboot-demo-0.0.1-SNAPSHOT.jar\' | grep -v \'grep\' | awk \'{print $2}\' | xargs kill -9'
                 sh 'JENKINS_NODE_COOKIE=dontKillMe nohup java -jar build/libs/springboot-demo-0.0.1-SNAPSHOT.jar --server.port=8081 &'
             }
         }
