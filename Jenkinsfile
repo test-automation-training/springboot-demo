@@ -16,10 +16,16 @@ pipeline {
                 sh './gradlew test --tests "name.huhao.springbootdemo.e2e.*"'
             }
         }
-        stage('Deploy') {
+        stage('Package') {
             steps {
                 sh './gradlew bootJar'
-                sh 'java -jar build/libs/springboot-demo-0.0.1-SNAPSHOT.jar --server.port=8081'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'docker-compose down --rmi local'
+                sh 'docker-compose build'
+                sh 'docker-compose up -d'
             }
         }
     }
