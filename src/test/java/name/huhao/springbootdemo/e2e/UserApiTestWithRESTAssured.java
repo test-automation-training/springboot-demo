@@ -45,6 +45,6 @@ public class UserApiTestWithRESTAssured {
                 .then()
                 .statusCode(200).contentType(ContentType.JSON)
                 .body("size()", is(1))
-                .body("name", hasItems("Alex"));
+                .body("name", hasItems("Bill"));
     }
 }
