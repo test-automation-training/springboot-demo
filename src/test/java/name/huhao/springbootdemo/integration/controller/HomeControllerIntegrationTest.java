@@ -23,6 +23,6 @@ public class HomeControllerIntegrationTest {
     public void indexShouldReturnHelloWorld() throws Exception {
         mvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello World!"));
+                .andExpect(content().string("Hello SRCB!"));
     }
 }

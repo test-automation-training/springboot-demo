@@ -17,6 +17,6 @@ public class HomeControllerTest {
 
     @Test
     public void indexShouldReturnHelloWorld() {
-        assertThat(controller.index()).isEqualTo("Hello World!");
+        assertThat(controller.index()).isEqualTo("Hello SRCB!");
     }
 }

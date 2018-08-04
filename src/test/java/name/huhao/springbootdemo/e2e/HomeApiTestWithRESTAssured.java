@@ -22,6 +22,6 @@ public class HomeApiTestWithRESTAssured {
     public void indexShouldReturnHelloWorld() {
         given().port(port).when().get("/").then()
                 .statusCode(200).contentType(ContentType.TEXT)
-                .body(containsString("Hello World!"));
+                .body(containsString("Hello SRCB!"));
     }
 }

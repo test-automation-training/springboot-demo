@@ -20,6 +20,6 @@ public class HomeApiTest {
     @Test
     public void indexShouldReturnHelloWorld() {
         String result = restTemplate.getForObject("/", String.class);
-        assertThat(result).isEqualTo("Hello World!");
+        assertThat(result).isEqualTo("Hello SRCB!");
     }
 }

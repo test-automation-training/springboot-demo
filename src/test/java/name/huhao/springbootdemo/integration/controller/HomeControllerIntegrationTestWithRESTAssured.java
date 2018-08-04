@@ -24,6 +24,6 @@ public class HomeControllerIntegrationTestWithRESTAssured {
         when().get("/")
                 .then()
                 .statusCode(200).contentType(ContentType.TEXT)
-                .body(containsString("Hello World!"));
+                .body(containsString("Hello SRCB!"));
     }
 }
