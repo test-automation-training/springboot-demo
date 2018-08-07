@@ -37,7 +37,7 @@ public class UserApiTest {
     }
 
     @Test
-    public void indexShouldReturnHelloWorld() throws Exception {
+    public void indexShouldReturnUsers() throws Exception {
         User alex = userRepository.save(new User("Alex", 18));
 
         ObjectMapper mapper = new ObjectMapper();

@@ -30,7 +30,7 @@ public class UserControllerIntegrationTest {
     private UserRepository userRepository;
 
     @Test
-    public void indexShouldReturnHelloWorld() throws Exception {
+    public void indexShouldReturnUsers() throws Exception {
         List<User> usersFromDB = Lists.newArrayList(new User("Alex", 18));
         when(userRepository.findAll()).thenReturn(usersFromDB);
 
