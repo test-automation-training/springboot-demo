@@ -38,7 +38,7 @@ public class UserApiTestWithRESTAssured {
     }
 
     @Test
-    public void indexShouldReturnHelloWorld() {
+    public void indexShouldReturnUsers() {
         userRepository.save(new User("Alex", 18));
 
         given().port(port).when().get("/users")

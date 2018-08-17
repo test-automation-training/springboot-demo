@@ -25,7 +25,7 @@ public class UserRepositoryTest {
     private UserRepository repository;
 
     @Test
-    public void userCanFindById() {
+    public void userCanFindByName() {
         entityManager.persist(new User("Alex", 18));
 
         List<User> foundUsers = repository.findByName("Alex");
